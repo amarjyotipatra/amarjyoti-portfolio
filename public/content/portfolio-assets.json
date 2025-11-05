@@ -1,0 +1,51 @@
+{
+  "owner": "Amarjyoti Patra",
+  "resume": {
+    "label": "Primary Resume",
+    "description": "Official export used for mission dossier downloads.",
+    "relPath": "/resume/Amarjyoti_Patra_3_4years.pdf",
+    "lastUpdated": "2025-11-05"
+  },
+  "portraits": [
+    {
+      "label": "Pro Headshot",
+      "relPath": "/images/profile-formal.jpg",
+      "promptSeed": "cyberwave executive holographic terminal",
+      "usage": ["hero.aiPortrait", "openGraph"],
+      "notes": "Use for updated professional imagery; pairs with teal/indigo shader palettes."
+    },
+    {
+      "label": "Casual Outdoor",
+      "relPath": "/images/profile-outdoor.jpg",
+      "promptSeed": "outdoor adventure synthwave lighting",
+      "usage": ["aiBackground", "ambientVideo"],
+      "notes": "Feed into AI background generator for warm social proof scenes."
+    }
+  ],
+  "aiBackground": {
+    "model": "stable-diffusion-xl",
+    "style": "cyberpunk-meets-modern-portfolio",
+    "loopLengthSeconds": 18,
+    "promptTemplate": "{subject} surrounded by neon circuitry, volumetric lighting, responsive particles",
+    "music": {
+      "genre": "ambient synthwave",
+      "key": "A minor",
+      "bpm": 86,
+      "referenceTracks": [
+        "Tycho - Awake",
+        "ODESZA - Bloom"
+      ]
+    }
+  },
+  "audio": {
+    "welcome": {
+      "relPath": "/media/welcome-loop.mp3",
+      "description": "Default welcome loop used in hero soundscape toggle."
+    }
+  },
+  "clientLogosDirectory": "/images/clients",
+  "metadata": {
+    "version": 1,
+    "generatedAt": "2025-11-05T00:00:00Z"
+  }
+}
