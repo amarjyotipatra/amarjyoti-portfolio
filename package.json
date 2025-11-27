@@ -9,15 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@apollo/client": "^3.10.4",
-    "@next/font": "13.4.0",
     "@react-three/drei": "^9.97.3",
     "@react-three/fiber": "^8.15.17",
     "browser-fingerprint": "^0.1.0",
     "framer-motion": "^11.0.12",
-    "graphql": "^16.9.0",
     "next": "^14.1.0",
-    "next-auth": "^4.24.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "swr": "^2.2.5",

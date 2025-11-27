@@ -36,7 +36,7 @@ export function ScrollToTop() {
     <>
       {/* Progress bar at top */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 via-cyan-500 to-blue-500 origin-left z-50"
+        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 via-cyan-500 to-blue-500 origin-left z-[60]"
         style={{ scaleX }}
       />
 
@@ -49,7 +49,7 @@ export function ScrollToTop() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 flex h-12 w-12 items-center justify-center rounded-full border border-emerald-400/50 bg-slate-900/90 text-emerald-400 shadow-lg backdrop-blur-sm transition-colors hover:bg-emerald-500 hover:text-white"
+          className="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-50 flex h-12 w-12 items-center justify-center rounded-full border border-emerald-400/50 bg-slate-900/90 text-emerald-400 shadow-lg backdrop-blur-sm transition-colors hover:bg-emerald-500 hover:text-white"
           aria-label="Scroll to top"
         >
           <svg

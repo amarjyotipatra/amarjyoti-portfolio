@@ -275,50 +275,53 @@ export function SolarSystemProjects() {
             ))}
           </motion.div>
 
-          {/* Sun (Center) */}
-          <motion.div
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 1, type: 'spring' }}
-          >
-            <div className="relative">
-              <motion.div
-                className="h-32 w-32 rounded-full bg-gradient-to-br from-yellow-300 via-orange-400 to-red-500 shadow-2xl"
-                animate={{
-                  scale: [1, 1.1, 1],
-                  boxShadow: [
-                    '0 0 60px rgba(251, 146, 60, 0.6)',
-                    '0 0 80px rgba(251, 146, 60, 0.8)',
-                    '0 0 60px rgba(251, 146, 60, 0.6)'
-                  ]
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: 'easeInOut'
-                }}
-              />
-              <div className="absolute inset-0 rounded-full bg-yellow-300 opacity-40 blur-3xl" />
-              
-              {/* Sun Label */}
-              <div className="absolute left-1/2 top-full mt-4 -translate-x-1/2 whitespace-nowrap rounded-full bg-orange-100 px-4 py-1 text-xs font-semibold text-orange-700 dark:bg-orange-900/40 dark:text-orange-300">
-                👨‍💻 Amarjyoti's Projects
+          {/* Solar System Content Wrapper for Scaling */}
+          <div className="relative w-full h-full flex items-center justify-center scale-[0.45] sm:scale-[0.6] md:scale-[0.8] lg:scale-100 transition-transform duration-500">
+            {/* Sun (Center) */}
+            <motion.div
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 1, type: 'spring' }}
+            >
+              <div className="relative">
+                <motion.div
+                  className="h-32 w-32 rounded-full bg-gradient-to-br from-yellow-300 via-orange-400 to-red-500 shadow-2xl"
+                  animate={{
+                    scale: [1, 1.1, 1],
+                    boxShadow: [
+                      '0 0 60px rgba(251, 146, 60, 0.6)',
+                      '0 0 80px rgba(251, 146, 60, 0.8)',
+                      '0 0 60px rgba(251, 146, 60, 0.6)'
+                    ]
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: 'easeInOut'
+                  }}
+                />
+                <div className="absolute inset-0 rounded-full bg-yellow-300 opacity-40 blur-3xl" />
+                
+                {/* Sun Label */}
+                <div className="absolute left-1/2 top-full mt-4 -translate-x-1/2 whitespace-nowrap rounded-full bg-orange-100 px-4 py-1 text-xs font-semibold text-orange-700 dark:bg-orange-900/40 dark:text-orange-300">
+                  👨‍💻 Amarjyoti's Projects
+                </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
 
-          {/* Planets (Projects) */}
-          {isLoading ? (
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-              <div className="h-12 w-12 animate-spin rounded-full border-4 border-slate-200 border-t-emerald-500 dark:border-slate-700" />
-              <p className="mt-4 text-sm text-slate-600 dark:text-slate-400">Loading projects...</p>
-            </div>
-          ) : (
-            data?.repos.map((repo: PinnedRepository, index: number) => (
-              <Planet key={repo.id} repo={repo} index={index} smoothProgress={smoothProgress} />
-            ))
-          )}
+            {/* Planets (Projects) */}
+            {isLoading ? (
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
+                <div className="h-12 w-12 animate-spin rounded-full border-4 border-slate-200 border-t-emerald-500 dark:border-slate-700" />
+                <p className="mt-4 text-sm text-slate-600 dark:text-slate-400">Loading projects...</p>
+              </div>
+            ) : (
+              data?.repos.map((repo: PinnedRepository, index: number) => (
+                <Planet key={repo.id} repo={repo} index={index} smoothProgress={smoothProgress} />
+              ))
+            )}
+          </div>
 
           {/* Stars Background - More dynamic */}
           {Array.from({ length: 80 }).map((_, i) => {
@@ -354,15 +357,15 @@ export function SolarSystemProjects() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
-          className="mt-12 text-center"
+          className="mt-12 text-center hidden lg:block"
         >
           <p className="text-sm text-slate-600 dark:text-slate-400">
             ⬇️ Scroll to see the planets orbit
           </p>
         </motion.div>
 
-        {/* Project List (Mobile Friendly) */}
-        <div className="mt-24 grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:hidden">
+        {/* Project List (Mobile Friendly) - Hidden now as Solar System is responsive */}
+        <div className="mt-24 hidden gap-6 sm:grid-cols-1 md:grid-cols-2">
           {data?.repos.map((repo: PinnedRepository, index: number) => {
             const color = planetColors[index % planetColors.length];
             return (

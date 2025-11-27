@@ -30,7 +30,7 @@ function StarField({ colorSet }: StarFieldProps) {
 
   const color = useMemo(() => new Color(colorSet[Math.floor(Math.random() * colorSet.length)]), [colorSet]);
 
-  useFrame(({ clock, camera }: { clock: { getElapsedTime: () => number }; camera: PerspectiveCamera }) => {
+  useFrame(({ clock, camera }) => {
     const t = clock.getElapsedTime();
     camera.position.x = Math.sin(t / 2) * 4;
     camera.position.y = Math.cos(t / 3) * 2;
