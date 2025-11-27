@@ -8,11 +8,11 @@ import { ThemeProvider } from '@/components/ThemeProvider';
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space-grotesk' });
 
 export const metadata: Metadata = {
-  title: 'Amarjyoti Patra | Full-Stack Experience Architect',
-  description: 'Game-inspired portfolio with AI-personalized imagery, immersive 3D scenes, and real-time analytics.',
+  title: 'Amarjyoti Patra | Creative Developer',
+  description: 'Full-stack engineer and creative technologist building immersive digital experiences.',
   keywords: ['Software Engineer', 'Portfolio', 'Full Stack', 'Next.js', 'Three.js', 'React'],
   openGraph: {
-    title: 'Amarjyoti Patra | Full-Stack Experience Architect',
+    title: 'Amarjyoti Patra | Creative Developer',
     description: 'Explore a game UI inspired developer portfolio with adaptive music, AI imagery, and real-time insights.',
     images: ['/images/profile-hero.jpg']
   },
