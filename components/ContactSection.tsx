@@ -51,9 +51,9 @@ export function ContactSection() {
         transition={{ duration: 0.6 }}
         className="text-center"
       >
-        <h2 className="text-4xl font-bold text-slate-900 dark:text-slate-100">Let's Connect! 🚀</h2>
+        <h2 className="text-4xl font-bold text-slate-900 dark:text-slate-100">Let&apos;s Connect! 🚀</h2>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600 dark:text-slate-300">
-          Have an exciting project in mind? Looking for a skilled full-stack engineer? Let's build something amazing together!
+          Have an exciting project in mind? Looking for a skilled full-stack engineer? Let&apos;s build something amazing together!
         </p>
       </motion.div>
 
@@ -109,7 +109,7 @@ export function ContactSection() {
           💡 Open to exciting opportunities and collaborations!
         </p>
         <p className="mt-3 text-slate-600 dark:text-slate-400">
-          Whether it's a full-time role, freelance project, or just a tech chat over coffee - I'd love to hear from you.
+          Whether it&apos;s a full-time role, freelance project, or just a tech chat over coffee - I&apos;d love to hear from you.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-4">
           <span className="rounded-full bg-emerald-100 px-4 py-2 text-sm font-medium text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300">

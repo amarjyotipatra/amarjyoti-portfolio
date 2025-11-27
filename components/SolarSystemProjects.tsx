@@ -191,6 +191,8 @@ export function SolarSystemProjects() {
     restDelta: 0.001
   });
 
+  const nebulaOpacity = useTransform(smoothProgress, [0, 0.5, 1], [0.2, 0.4, 0.2]);
+
   const username = process.env.NEXT_PUBLIC_GITHUB_USERNAME ?? 'amarjyotipatra';
   const { data, error, isLoading } = useSWR(
     `/api/github/pinned?username=${encodeURIComponent(username)}`,
@@ -247,7 +249,7 @@ export function SolarSystemProjects() {
           {/* Nebula Clouds */}
           <motion.div
             className="pointer-events-none absolute inset-0"
-            style={{ opacity: useTransform(smoothProgress, [0, 0.5, 1], [0.2, 0.4, 0.2]) }}
+            style={{ opacity: nebulaOpacity }}
           >
             {[1, 2, 3].map((cloud, i) => (
               <motion.div
@@ -305,7 +307,7 @@ export function SolarSystemProjects() {
                 
                 {/* Sun Label */}
                 <div className="absolute left-1/2 top-full mt-4 -translate-x-1/2 whitespace-nowrap rounded-full bg-orange-100 px-4 py-1 text-xs font-semibold text-orange-700 dark:bg-orange-900/40 dark:text-orange-300">
-                  👨‍💻 Amarjyoti's Projects
+                  👨‍💻 Amarjyoti&apos;s Projects
                 </div>
               </div>
             </motion.div>

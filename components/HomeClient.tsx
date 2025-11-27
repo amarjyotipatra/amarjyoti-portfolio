@@ -149,7 +149,7 @@ export function HomeClient() {
             </h1>
 
             <p className="mx-auto max-w-2xl text-lg text-slate-400 mb-10 leading-relaxed">
-              I'm Amarjyoti, a Full Stack Architect focused on building intuitive, 
+              I&apos;m Amarjyoti, a Full Stack Architect focused on building intuitive, 
               high-performance web experiences that feel like magic.
             </p>
 
